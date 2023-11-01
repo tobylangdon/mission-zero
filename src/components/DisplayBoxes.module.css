@@ -1,0 +1,55 @@
+.boxContainer {
+    transition-duration: 0.5s;
+    height: 20vw;
+    flex-basis: 28vw;
+    background-color: rgb(128, 128, 128);
+    margin: 2vw;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+}
+.boxImage {
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    filter: grayscale();
+    transition-duration: 0.5s;
+}
+.boxImage img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.boxInfo {
+    width: 100%;
+    background-color: var(--secondary);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.boxInfo p,
+.boxInfo h4 {
+    margin: 0;
+    margin-left: 5%;
+}
+.boxContainer:hover {
+    transform: scale(1.05);
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+.boxContainer:hover .boxImage {
+    filter: none;
+}
+@media screen and (max-width: 1024px) {
+    .boxContainer {
+        height: 35vw;
+        flex-basis: 48vw;
+        margin: 4vw 2vw;
+    }
+}
+@media screen and (max-width: 480px) {
+    .boxContainer {
+        height: 70vw;
+        flex-basis: 96vw;
+        margin: 6vw 4vw;
+    }
+}
